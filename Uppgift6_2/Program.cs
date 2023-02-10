@@ -8,13 +8,22 @@ namespace uppgift6_1
             Console.WriteLine("Skriv ner var en nummer på var sin rad");
             int nummer = int.Parse(Console.ReadLine());
             int nummer2 = int.Parse(Console.ReadLine());
-            int nummer3 = int.Parse(Console.ReadLine());
-            tal(nummer, nummer2, nummer3);
+            Störst(nummer, nummer2);
         }
-        static void tal(int tal1, int tal2, int tal3)
+        static void Störst(int tal1, int tal2)
         {
-            int summa = tal1 + tal2 + tal3;
-            Console.WriteLine("Den summa är" + summa + ".");
+            if (tal1 > tal2)
+            {
+                Console.WriteLine("Den största talen är" + tal1 + ".");
+            }
+            else if (tal1 < tal2)
+            {
+                Console.WriteLine("Den största talen är" + tal2 + ".");
+            }
+            else if (tal1 == tal2)
+            {
+                Console.WriteLine("De är lika stora");
+            }
         }
     }
 }
